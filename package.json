@@ -1,0 +1,14 @@
+{
+  "name": "praguebest-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "www/index.html",
+  "author": "Jakub Šanda <sanda.jakubhtc@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-less": "^3.1.0",
+    "gulp-watch": "^4.3.9"
+  }
+}

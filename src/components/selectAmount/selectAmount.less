@@ -1,0 +1,99 @@
+@inputWidth: 75px;
+@inputHeight: 45px;
+@controlWidth: 25px;
+
+.SelectAmount {
+
+	display: inline-block;
+	position: relative;
+	
+	&-input {
+		width: @inputWidth;
+		height: @inputHeight;
+		margin-right: calc(@controlWidth * 1.6);
+		margin-left: calc(@controlWidth * 1.6);
+		font-size: 1rem;
+		padding: 7px;
+		border: 1px solid @brand-primary;
+		border-left: none;
+		border-right: none;
+		text-align: center;
+
+		@media(min-width: @screen-tablet) {
+			margin-right: @controlWidth;
+			margin-left: 0;
+			border-left: 1px solid @brand-primary;
+		}
+	}
+
+	&-control {
+		position: absolute;
+		display: block;
+		width: calc(@controlWidth * 1.6);
+		cursor: pointer;
+		font-size: .65rem;
+    	font-family: 'Glyphicons Halflings';
+    	font-style: normal;
+    	font-weight: 400;
+	    line-height: 1;
+	    -webkit-font-smoothing: antialiased;
+		height: @inputHeight;
+		border: 1px solid @brand-primary;
+		.transition(all .2s);
+		.flex-display;
+		.align-items(center);
+
+		&:hover {
+			background-color: lighten(@brand-primary, 13.5%);
+			color: #fff;
+		}
+
+		@media(min-width: @screen-tablet) {
+			width: @controlWidth;
+			height: calc(@inputHeight / 2);
+		}
+
+		&:before {
+			position: relative;
+		    left: 0;
+		    right: 0;
+		    margin-left: auto;
+		    margin-right: auto;
+		}
+
+		&--plus {
+
+			right: 0;
+			top: 0;
+
+			@media(min-width: @screen-tablet) {
+				border-bottom: none;
+			}
+			
+			&:before {
+				content: "\002b";
+			}
+			
+		}
+
+		&--minus {
+
+			left: 0;
+			top: 0;
+
+			@media(min-width: @screen-tablet) {
+				right: 0;
+				bottom: 0;
+				top: auto;
+				left: auto;
+			}
+
+			&:before {
+				content: "\2212";
+			}
+
+			
+		}
+	}
+
+}
