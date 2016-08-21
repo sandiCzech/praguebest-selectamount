@@ -1,6 +1,15 @@
-function SelectAmountComponent() {
-	this.min = 1;
-	this.max = 100;
+/**
+ * Creates an instance of SelectAmountComponent.
+ *
+ * @constructor
+ * @this {SelectAmountComponent}
+ * @param {number} min Minimum value
+ * @param {number} max Maximum value
+ */
+
+function SelectAmountComponent(min = 1, max = 100) {
+	this.min = min;
+	this.max = max;
 	this.value = this.min;
 	this.input = $('input[name="selectAmount"]');
 	this.control = $('.SelectAmount-control');
@@ -11,7 +20,7 @@ function SelectAmountComponent() {
 SelectAmountComponent.prototype = {
 	selfsac: null,
 
-	// init input
+	// init component
 	init: function() {
 		selfsac = this;
 
@@ -69,7 +78,10 @@ SelectAmountComponent.prototype = {
 		
 	},
 
-	// increment / decrement input value after control press 
+	/**
+	 * Increment or decrement input value by 1
+	 * @param {Object} control 
+	 */
 	updateInput: function(control) {
 
 		// determine operation type
@@ -96,5 +108,5 @@ SelectAmountComponent.prototype = {
 };
 
 $(function(){
-	new SelectAmountComponent();
+	new SelectAmountComponent(1, 100);
 });
