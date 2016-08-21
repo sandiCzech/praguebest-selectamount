@@ -1,5 +1,5 @@
 # praguebest-selectamount
-Test for praguebest - [simple quantity control component](/tree/master/src/components/selectAmount)
+Test for praguebest - [simple quantity control component](../blob/master/src/components/selectAmount)
 
 ## Instalation
 npm install
